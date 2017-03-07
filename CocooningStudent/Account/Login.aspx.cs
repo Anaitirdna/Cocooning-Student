@@ -31,7 +31,7 @@ namespace CocooningStudent.Account
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
 
-                // Ceci ne compte pas les échecs de connexion pour le verrouillage du compte
+                // Ceci ne compte pas les échecs de connexion pour le verrouillage du compte    
                 // Pour que les échecs de mot passe déclenchent le verrouillage, utilisez shouldLockout: true
                 var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
 
